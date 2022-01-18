@@ -2,6 +2,16 @@ import { upgradeTemplate } from './template-transforms';
 
 describe('template-transforms', () => {
     describe('#upgradeTemplate', () => {
+        it('should replace `ng-bind` with `[textContent]`', () => {
+            expect(upgradeTemplate('<div ng-bind="myVar"></div>'))
+                .toEqual('<div [textContent]="myVar"></div>');
+        });
+
+        it('should replace `ng-bind-html` with `[innerHTML]`', () => {
+            expect(upgradeTemplate('<div ng-bind-html="myVar"></div>'))
+                .toEqual('<div [innerHTML]="myVar"></div>');
+        });
+
         it('should replace `ng-if` with `*ngIf`', () => {
             expect(upgradeTemplate('<div ng-if="test"></div>'))
                 .toEqual('<div *ngIf="test"></div>');

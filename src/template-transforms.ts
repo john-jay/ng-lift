@@ -44,6 +44,8 @@ export const attributeMapping: IAttributeMapping = {
     'ng-src': 'src',
     'ng-srcset': 'srcset',
     'ng-style': '[ngStyle]',
+    'ng-bind': '[textContent]',
+    'ng-bind-html': '[innerHTML]',
 
     // Events
     'ng-blur': '(blur)',

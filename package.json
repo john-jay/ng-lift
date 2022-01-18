@@ -50,8 +50,7 @@
     "collectCoverageFrom": [
       "src/**/*.ts",
       "!src/**/*.spec.ts"
-    ],
-    "mapCoverage": true
+    ]
   },
   "engines": {
     "node": ">= 6.4.0"

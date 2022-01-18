@@ -24,6 +24,8 @@ function isTextNode(node: parse5.Node): node is parse5.TextNode {
 }
 
 export const attributeMapping: IAttributeMapping = {
+    'ng-bind': '[textContent]',
+    'ng-bind-html': '[innerHTML]',
     'ng-checked': '[checked]',
     'ng-class': '[ngClass]',
     'ng-disabled': '[disabled]',
@@ -44,8 +46,6 @@ export const attributeMapping: IAttributeMapping = {
     'ng-src': 'src',
     'ng-srcset': 'srcset',
     'ng-style': '[ngStyle]',
-    'ng-bind': '[textContent]',
-    'ng-bind-html': '[innerHTML]',
 
     // Events
     'ng-blur': '(blur)',
